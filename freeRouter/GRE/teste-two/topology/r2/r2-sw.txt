@@ -1,0 +1,39 @@
+hostname r2
+buggy
+!
+!
+vrf definition v1
+ exit
+!
+!
+interface ethernet1
+ description r1@e1 -> r2@e1
+ lldp ena
+ vrf forwarding v1
+ ipv4 address 1.1.1.2 255.255.255.0
+ ipv6 address 2222::1 ffff:ffff:ffff:ffff::
+ no shutdown
+ no log-link-change
+ exit
+!
+!
+interface ethernet2
+ description r1@e1 -> r2@e1
+ lldp ena
+ vrf forwarding v1
+ ipv4 address 2.2.2.1 255.255.255.0
+ ipv6 address 3333::1 ffff:ffff:ffff:ffff::
+ no shutdown
+ no log-link-change
+ exit
+!
+!
+server telnet tel
+ security protocol telnet
+ no exec authorization
+ no login authentication
+ vrf v1
+ exit
+!
+!
+end

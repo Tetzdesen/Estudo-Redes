@@ -1,0 +1,65 @@
+hostname r5
+buggy
+!
+!
+vrf definition v1
+ exit
+!
+router ospf4 1
+ vrf v1
+ router-id 5.5.5.1
+ traffeng-id 0.0.0.0
+ area 0 enable
+ exit
+!
+interface ethernet1
+ description r1@e1 -> r2@e1
+ vrf forwarding v1
+ ipv4 address 5.5.5.2 255.255.255.0
+ router ospf4 1 enable
+ router ospf4 1 area 0
+ no shutdown
+ no log-link-change
+ exit
+!
+interface ethernet2
+ description r1@e1 -> r2@e1
+ vrf forwarding v1
+ ipv4 address 6.6.6.2 255.255.255.0
+ router ospf4 1 enable
+ router ospf4 1 area 0
+ no shutdown
+ no log-link-change
+ exit
+!
+!
+interface ethernet3
+ description r1@e1 -> r2@e1
+ vrf forwarding v1
+ ipv4 address 7.7.7.2 255.255.255.0
+ router ospf4 1 enable
+ router ospf4 1 area 0
+ no shutdown
+ no log-link-change
+ exit
+!
+!
+interface ethernet4
+ description r1@e1 -> r2@e1
+ vrf forwarding v1
+ ipv4 address 8.8.8.2 255.255.255.0
+ router ospf4 1 enable
+ router ospf4 1 area 0
+ no shutdown
+ no log-link-change
+ exit
+!
+!
+server telnet tel
+ security protocol telnet
+ no exec authorization
+ no login authentication
+ vrf v1
+ exit
+!
+end
