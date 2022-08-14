@@ -87,3 +87,24 @@ GigabitEthernet0/2 is up, line protocol is up (connected)
      0 lost carrier, 0 no carrier
      0 output buffer failures, 0 output buffers swapped out
 ```
+
+### Configuration PC network
+
+<div style='display: inline-block'>
+   <img align="center" alt="rede-02" src='rede-02.png' />
+</div>
+
+</br>
+<div style='display: inline-block'>
+   <img align="center" alt="rede-03" src='rede-03.png' />
+</div>
+
+</br>
+<div style='display: inline-block'>
+   <img align="center" alt="rede-04" src='rede-04.png' />
+</div>
+
+</br>
+<div style='display: inline-block'>
+   <img align="center" alt="rede-05" src='rede-05.png' />
+</div>
