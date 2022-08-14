@@ -108,3 +108,42 @@ GigabitEthernet0/2 is up, line protocol is up (connected)
 <div style='display: inline-block'>
    <img align="center" alt="rede-05" src='rede-05.png' />
 </div>
+
+</br>
+
+### Tests
+
+- Ping 192.168.0.1
+
+```
+C:\>ping 192.168.0.1
+
+Pinging 192.168.0.1 with 32 bytes of data:
+
+Reply from 192.168.0.1: bytes=32 time=10ms TTL=255
+Reply from 192.168.0.1: bytes=32 time=3ms TTL=255
+Reply from 192.168.0.1: bytes=32 time<1ms TTL=255
+Reply from 192.168.0.1: bytes=32 time=3ms TTL=255
+
+Ping statistics for 192.168.0.1:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 10ms, Average = 4ms
+```
+
+- Ping 192.168.1.1
+```
+C:\>ping 192.168.1.1
+
+Pinging 192.168.1.1 with 32 bytes of data:
+
+Reply from 192.168.1.1: bytes=32 time<1ms TTL=255
+Reply from 192.168.1.1: bytes=32 time<1ms TTL=255
+Reply from 192.168.1.1: bytes=32 time<1ms TTL=255
+Reply from 192.168.1.1: bytes=32 time<1ms TTL=255
+
+Ping statistics for 192.168.1.1:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+```
