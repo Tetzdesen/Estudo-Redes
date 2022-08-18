@@ -4,5 +4,5 @@ Repo para colocação de estudos feitos e experiências envolvendo topologia de 
 ## freeRouter
 
 ## Cisco 
-- Packet Tracer ()
+- Packet Tracer Labs (https://github.com/Tetzdesen/Estudo-Redes/tree/main/Cisco)
 
